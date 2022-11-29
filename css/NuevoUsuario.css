@@ -1,0 +1,115 @@
+body {
+  background-color: #f1f1f1;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor{
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.special{
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.curstep{
+  max-width: 100%;
+  min-height: 45px;
+  background-color: #5bad16;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-around;
+}
+
+input[type="checkbox"]{
+  width: 25px;
+  height: 16px;
+}
+
+input[type="radio"]{
+  width: 30px;
+  height: 20px;
+}
+
+#regForm {
+  padding: 20px;
+  width: 80%;
+  height: auto;
+}
+
+h4 {
+  color: green;
+  font-weight: bolder;
+}
+
+input {
+  padding: 10px;
+  width: 46%;
+  font-size: 12px;
+  border-bottom-style: solid;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-color: #122d80;
+  border-width: thin;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default:*/
+.tab {
+  display: none;
+}
+
+button {
+  background-color: green;
+  color: #ffffff;
+  width: 200px;
+  border: 2px solid rgb(116, 116, 115);
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+select{
+  width: 45%;
+  height: 30px;
+}
+
+#cancel{
+  width: 55px;
+  height: 27px;
+  padding: 2px 1px;
+  margin-top: 9px;
+  margin-left: 65px;
+  font-size: 9px;
+}
+
+@media (min-width: 800px) {
+  body{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+  }
+
+  .contenedor{
+    min-width: 801px;
+  }
+}

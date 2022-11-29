@@ -1,0 +1,138 @@
+*{
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+
+.Encabezado{
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.Encabezado img{
+  width: 30%;
+}
+.Encabezado span{
+  width: 100%;
+  margin: 5px;
+  color: White;
+  background-color: rgb(27, 168, 33);
+  text-align: center;
+}
+
+.formato
+{
+
+  border: 3px inset green;
+  border-radius: 3px;
+}
+
+table{
+  margin: 0 auto;
+  text-align: center;
+  width: 62%;
+}
+td{
+  padding-bottom: 20px;
+  width: 50%;
+}
+
+button{
+  background-color: rgb(38, 122, 38);
+  font-size: 15px;
+  width: 60%;
+  border-radius: 5px;
+  border: 0.3px solid black ;
+  color: white;
+}
+
+button#aceptar{
+  margin-left: 90px;
+}
+button#cancelar{
+  margin-right: 90px;
+}
+
+select, input{
+  border: 0;
+  border-bottom: 2px solid green;
+  width: 80%;
+  text-align: center;
+
+}
+
+textarea{
+  border: 2px solid green;
+  width: 90%;
+}
+
+.contenedor2
+{
+ font-size: 15px;
+ font-style: oblique;
+ font-weight: bold;
+ text-align: center;
+
+
+ display: flex;
+ flex-direction: column;
+ margin: 0 auto;
+
+
+ margin-top: 20px;
+ width: 100%;
+ background-color: rgba(235, 179, 40, 0.80);
+}
+
+.contenedor2 div
+{
+  display: flex;
+  align-items: center;
+
+
+  justify-content: space-around;
+}
+
+.contenedor3
+{
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+
+
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+
+  background-color: #000000;
+  width: 100%;
+}
+
+.contenedor3 a
+{
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+@media(max-width: 800px){
+  table{
+    width: 100%;
+  }
+  button#aceptar{
+    margin-left: 0;
+  }
+  button#cancelar{
+    margin-right: 0;
+  }
+
+}
+
+@media (min-width: 800px) {
+  body{
+    width: 800px;
+    margin:30px auto;
+  }
+}

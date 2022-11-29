@@ -1,0 +1,351 @@
+body
+{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Raleway', sans-serif;
+  max-width: 800px;
+  margin: 30px auto 0 auto;
+
+  display: flex;
+  display:block;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Encabezado
+{
+  width: 100%;
+  color: #ffffff;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #327e34;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 5px;
+  border-color: #1f4720;
+}
+.titulo
+{
+  color: white;
+  border: none;
+  height: 20px;
+  width: 70%;
+  border-radius: 5px;
+  background-color: #327e34;
+  text-align: center;
+  margin: 0px auto;
+}
+.titulo span
+{
+  font-size: 15px;
+}
+.formato
+{
+  width: 302px;
+  margin: 60px auto 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+  border-color: #1f4720;
+  border: 3px inset #1f4720;
+  height: 500px;
+  box-shadow: 5px 5px 5px white;
+}
+
+table{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+td{
+  padding-bottom: 20px;
+}
+form{
+  margin: 0 auto;
+}
+input{
+  border: 0;
+  border-bottom: 2px solid green;
+  text-align: center;
+}
+.adicional{
+  width: 90%;
+  height: 25px;
+}
+.Encabezado img
+{
+  width: 75px;
+}
+
+.piede
+{
+  width: 302px;
+  height: 100px;
+  font-size: 15px;
+  font-style: oblique;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+
+}
+.enlaces a
+{
+  display: flex;
+  margin: 2px;
+  color: white;
+  font-size: 11px;
+  font-family: sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+.enlaces img
+{
+  width: 10px;
+}
+.redes
+{
+  background-color: rgba(235, 179, 40, 0.80);
+}
+.redes img
+{
+  width:25px;
+}
+.table
+{
+  width: 100%;
+}
+
+.puchar
+{
+  background-color: rgb(38, 122, 38);
+  color: white;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 0.3px solid black ;
+}
+hr
+{
+  border: none;
+}
+
+.contenedor2
+{
+ font-size: 15px;
+ font-style: oblique;
+ font-weight: bold;
+ text-align: center;
+
+ display: flex;
+ flex-direction: column;
+
+ background-color: rgba(235, 179, 40, 0.80);
+}
+
+.contenedor2 div
+{
+  display: flex;
+  justify-content: space-around;
+}
+
+.contenedor3
+{
+  font-size: 15px;
+  color: #ffffff;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+
+  background-color: #000000;
+}
+
+.contenedor3 a
+{
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 320px)
+{
+  .formato
+  {
+    width: 100%;
+  }
+  .titulo
+  {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+  }
+  .piede
+  {
+    width: 100%;
+  }
+  table
+  {
+    width: 100%;
+  }
+  .puchar
+  {
+    font-size: 13px;
+  }
+  .enlaces img
+  {
+    width: 12px;
+  }
+  .enlaces a
+  {
+    font-size: 12px
+  }
+}
+@media (min-width: 331px)
+{
+  .redes span
+  {
+    font-size: 16px;
+  }
+  .redes img
+  {
+    width: 30px;
+  }
+}
+@media (min-width: 355px)
+{
+  .redes span
+  {
+    font-size: 17px;
+  }
+  .redes img
+  {
+    width: 30px;
+  }
+  .enlaces img
+  {
+    width: 13px;
+  }
+  .enlaces a
+  {
+    font-size: 13px;
+  }
+  .puchar
+  {
+    font-size: 17px;
+  }
+}
+@media (min-width: 360px)
+{
+  .Encabezado span
+  {
+    font-size: 22px;
+  }
+  .titulo
+  {
+    width: 355px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0px auto;
+  }
+  .piede
+  {
+    width: 100%;
+  }
+  table
+  {
+    width: 100%;
+  }
+  .puchar
+  {
+    font-size: 15px;
+  }
+  .enlaces img
+  {
+    width: 12px;
+  }
+  .enlaces a
+  {
+    font-size: 12px;
+  }
+  .redes img
+  {
+    width: 30px;
+  }
+}
+@media (min-width:374px)
+{
+  .redes img
+  {
+    width: 35px;
+  }
+  .redes span
+  {
+    font-size: 18px;
+  }
+}
+@media (min-width: 440px) {
+  .Encabezado span
+  {
+    font-size: 25px;
+  }
+  .formato
+  {
+    width: 98%;
+  }
+  .titulo
+  {
+    width: 355px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0px auto;
+  }
+  .redes img
+  {
+    width: 25px;
+  }
+}
+@media (min-width:800px) {
+  .Encabezado img
+  {
+    width: 100px;
+  }
+  .titulo
+  {
+    width: 70%;
+    font-size: 23px;
+  }
+  .formato{
+    width: 800px;
+  }
+
+
+  td.espaciar{
+    padding-right: 30px;
+  }
+
+
+  .titulo span
+  {
+    font-size: 20px;
+  }
+  .Redes span
+  {
+    font-size: 25px;
+  }
+  .Redes img
+  {
+    width: 45px;
+  }
+
+}

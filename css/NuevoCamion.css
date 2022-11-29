@@ -1,0 +1,240 @@
+body{
+  max-width: 100%;
+  min-height: 100%;
+  background-image: url("../img/FonTrailer.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+legend{
+  font-family: georgia, verdana;
+  font-style: oblique;
+  font-size: 85%;
+  color: rgb(214, 228, 50);
+}
+img{
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+table{
+  width: 90%;
+  border-spacing: 12px;
+}
+input{
+  width: 100%;
+  height: 8%;
+  border-color: rgb(54, 54, 54);
+  border-width: thin;
+}
+h2{
+  color: #ffffff;
+  font-family: georgia, verdana;
+  font-size: 12px;
+  font-style: oblique;
+  font-weight: bold;
+}
+fieldset{
+  width: 85%;
+  border-color: #93be02;
+  border-width: 3px;
+}
+.contenedor{
+  max-width: 100%;
+  min-height: 100%;
+  background-color: rgba(133, 133, 133, 0.66);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo{
+  width: 30%;
+  height: 15%;
+  position: absolute;
+  top: 8%;
+  left: 16%;
+}
+.titulo{
+  width: 45%;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+}
+.formulario{
+  width: 95%;
+  text-align: center;
+  position: absolute;
+  top: 28%;
+}
+.bot{
+  width: 70px;
+  height: 22px;
+  margin: 5px;
+}
+.datos{
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mark{
+  width: 100%;
+  height: 8%;
+  border-color: rgb(54, 54, 54);
+  border-width: thin;
+}
+
+.contenedor2
+{
+ font-size: 15px;
+ font-style: oblique;
+ font-weight: bold;
+ text-align: center;
+
+ display: flex;
+ flex-direction: column;
+
+ background-color: rgba(235, 179, 40, 0.80);
+}
+
+.contenedor2 div
+{
+  display: flex;
+  align-items;
+
+  justify-content: space-around;
+}
+
+.contenedor3
+{
+  font-size: 15px;
+  color: #ffffff;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+
+  background-color: #000000;
+}
+
+.contenedor3 a
+{
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+
+@media (min-width: 320px){
+  legend{
+    font-size: 20px;
+  }
+  table{
+    min-width: 85%;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  input, .mark{
+    width: 100%;
+    height: 50%;
+  }
+  h2{
+    font-size: 20px;
+  }
+  td{
+    font-size: 5px;
+  }
+  .datos{
+    width: 90%;
+  }
+  .bot{
+    width: 70px;
+    height: 20px;
+    margin: 3px;
+  }
+  .logo{
+    width: 30%;
+    height: 12%;
+    left: 20%;
+  }
+  .titulo{
+    width: 32%;
+    left: 52%;
+    top: 5%;
+  }
+  .formulario{
+    width: 75%;
+  }
+}
+
+@media (min-width: 480px) {
+  legend{
+    font-size: 30px;
+  }
+  table{
+    min-width: 60%;
+  }
+  input, .mark{
+    width: 230px;
+    height: 30px;
+  }
+  .logo{
+    width: 30%;
+    height: 15%;
+    top: 8%;
+    left: 16%;
+
+  }
+  .titulo{
+    width: 35%;
+    top: 10%;
+  }
+  .formulario{
+    width: 72%;
+    top: 24%;
+  }
+  .bot{
+    width: 90px;
+    height: 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  legend{
+    font-size: 35px;
+  }
+  h2{
+    font-size: 25px;
+  }
+  .formulario{
+    width: 47%;
+  }
+}
+
+@media (min-width: 1024px) {
+  h2{
+    font-size: 30px;
+  }
+  input, .mark{
+    width: 260px;
+    height: 35px;
+  }
+  .logo{
+    width: 20%;
+    left: 25%;
+    top: 7%;
+  }
+  .titulo{
+    left: 48%;
+    top: 8%;
+  }
+}

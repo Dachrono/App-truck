@@ -1,0 +1,132 @@
+drop database trucksaver;
+
+create database trucksaver;
+
+use trucksaver
+
+create table cliente
+(IDcliente int primary key auto_increment,
+company Varchar (45),
+full_name varchar (100),
+phone bigint,
+mail varchar (45));
+
+create table cliente_add
+(idadd int auto_increment,
+idcliente int,
+Address varchar (45),
+city varchar (45),
+state varchar (45),
+zcode int,
+primary key (idadd,idcliente));
+
+Create table trucks(
+IDunidad int auto_increment,
+IDcliente int,
+IDmarca int,
+state varchar(35),
+Vin varchar(35),
+plate varchar(15),
+Unit int,
+Vehicle_type varchar(15),
+year int,
+model varchar(64),
+color varchar(35),
+primary key (idunidad, idcliente, idmarca, model));
+
+create table usuarios
+(IDuser int auto_increment,
+idcliente int,
+usuario varchar (75),
+contrasena varchar (75),
+estatus varchar(3),
+primary key (iduser,idcliente));
+
+create table marca
+(IDmarca int primary key,
+descripcion varchar (45));
+
+create table modelo
+(IDmodelo int primary key,
+descripcion varchar (45));
+
+create table servicio
+(Idservicio int primary key auto_increment,
+SKU varchar (45),
+Descripcion varchar (45));
+
+create table lista
+(idlista int auto_increment,
+idcliente int,
+idunidad int,
+idmarca int,
+placas varchar(35),
+fecha datetime,
+primary key(idlista, idcliente, idunidad, idmarca));
+
+create table tipos_aceite
+(idtipo int,
+descripcion varchar (45));
+
+create table registro_serv
+(idreg int auto_increment,
+idcliente int,
+unidad varchar (75),
+fecha varchar(15),
+hora time,
+idservicio int,
+adicionales varchar(100),
+primary key (idreg, idcliente,idservicio));
+
+alter table trucks add foreign key (idcliente) references cliente(idcliente);
+alter table trucks add foreign key (idmarca) references marca(idmarca);
+
+alter table lista add foreign key (idunidad) references trucks(idunidad);
+
+alter table usuarios add foreign key (idcliente) references cliente(idcliente);
+alter table lista add foreign key (idcliente) references cliente(idcliente);
+alter table lista add foreign key (idmarca) references marca(idmarca);
+alter table registro_serv add foreign key (idcliente) references cliente(idcliente);
+alter table registro_serv add foreign key (idservicio) references servicio(idservicio);
+alter table cliente_add add foreign key (idcliente) references cliente(idcliente);
+
+insert into marca value
+(0,"sin-marca"),
+(1,"ContainerChassis"),
+(2,"DryVan"),
+(3,"Dump"),
+(4,"FlatBed"),
+(5,"Freightliner"),
+(6,"International"),
+(7,"Kenworth"),
+(8,"Mack"),
+(9,"Peterbilt"),
+(10,"TankTrailer"),
+(11,"Volvo");
+
+alter table marca add type varchar(10);
+update marca set type="null" where idmarca=0;
+update marca set type="trailer" where idmarca=1;
+update marca set type="trailer" where idmarca=2;
+update marca set type="truck" where idmarca=3;
+update marca set type="truck" where idmarca=4;
+update marca set type="trailer" where idmarca=5;
+update marca set type="trailer" where idmarca=6;
+update marca set type="trailer" where idmarca=7;
+update marca set type="truck" where idmarca=8;
+update marca set type="truck" where idmarca=9;
+update marca set type="trailer" where idmarca=10;
+update marca set type="truck" where idmarca=11;
+
+insert into servicio value
+(1, "SER1PREV", "Change oil");
+
+insert into tipos_aceite value
+(1, "Gonher 20/50"),
+(2, "Gonher 15/40"),
+(3, "Rotella 15/40"),
+(4, "Mobil Delvac 15/40"),
+(5, "Mystik 15/50"),
+(6, "delo 15/40");
+
+alter table modelo add IDmarca int;

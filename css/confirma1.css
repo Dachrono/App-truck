@@ -1,0 +1,90 @@
+body
+{
+  background-image: url("../img/BackG.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  display: block;
+  align-items: center;
+
+}
+.contenedor
+{
+  width: 302px;
+  border: 1px solid;
+}
+.Encabezado
+{
+  color: white;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 15px;
+  text-align: center;
+  border-radius: 5px;
+  border-color: #1f4720;
+}
+.titulo
+{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border: none;
+  height: 20px;
+}
+.formato
+{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  border-color: #1f4720;
+  height: 400px;
+  background: grey;
+  box-shadow: 5px 5px 5px white;
+}
+
+.Encabezado img
+{
+  width: 75px;
+}
+
+.piede
+{
+  height: 100px;
+  font-size: 15px;
+  font-style: oblique;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+
+}
+.enlaces a
+{
+  display: flex;
+  margin: 2px;
+  color: white;
+  font-size: 11px;
+  font-family: sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+.enlaces img
+{
+  width: 10px;
+}
+.redes
+{
+  background-color: rgba(235, 179, 40, 0.80);
+}
+.redes img
+{
+  width:25px;
+}
+td
+{
+  text-align: center;
+}

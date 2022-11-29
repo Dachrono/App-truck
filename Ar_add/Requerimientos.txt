@@ -1,0 +1,27 @@
+Levantamiento de requisitos
+
+*Banner con informacion del cliente
+*Cambiar el diseño y posicion del tigger
+
+--- Modificaciones menores ---
+
+
+
+--- Modificaciones mayores ---
+*Realizar algo para actualizar datos de la unidad 
+*Eliminar unidades que ya no se utilicen
+
+--- Modificaciones futuras ---
+* Debera haber espacio para otros tipos de servicios
+* Facturacion de dash para consulta en app (lo revisa Jorge)
+
+
+
+
+
+
+!!! --- REQUERIMIENTOS REALIZADOS --- !!!
+
+*cambiar nombre de la marca
+*Cambiar orden del nombre de la unidad
+*Cambiar la unidad defualt por select unit

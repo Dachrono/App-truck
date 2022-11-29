@@ -1,0 +1,152 @@
+body
+{
+  max-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.Contenedor1
+{
+  margin: 3px;
+  max-width: 100%;
+  min-height: 80%;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+.logo
+{
+  min-height: 40%;
+  background-image: url("../img/BackPrin.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.logo img
+{
+  max-width: 40%;
+  height: auto;
+  background-color: white;
+}
+
+.login
+{
+  width: 100%;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bolder;
+  color: green;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.login form
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.login input
+{
+  margin: 5px;
+  padding: 15px;
+  width: 95%;
+  font-size: 15px;
+  border-bottom-style: solid;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-color: #122d80;
+  border-width: thin;
+}
+
+.login button
+{
+  background-color: #356f05;
+  color: #ffffff;
+  width: 100%;
+  border: 2px solid rgb(116, 116, 115);
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.login a
+{
+  color: green;
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+input[type="radio"]
+{
+  width: 15px;
+  height: 15px;
+}
+
+.contenedor2
+{
+ font-size: 15px;
+ font-style: oblique;
+ font-weight: bold;
+ text-align: center;
+
+ margin-top: 20px;
+ display: flex;
+ flex-direction: column;
+
+ background-color: rgba(235, 179, 40, 0.80);
+}
+
+.contenedor2 div
+{
+  display: flex;
+  align-items;
+
+  justify-content: space-around;
+}
+
+.contenedor3
+{
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+
+  background-color: #000000;
+}
+
+.contenedor3 a
+{
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 800px) {
+  body
+  {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+  }
+
+  .Contenedor1, .contenedor2, .contenedor3
+  {
+    min-width: 801px;
+  }
+}
