@@ -22,8 +22,6 @@
   $Add = $row['Address'];
   $Dir = $row['city'].", " .$row['state'];
   $Cod = $row['zcode'];
-
-  //Prueba solamente
 ?>
 
 <html>
@@ -101,26 +99,27 @@
       <br>
       <div class="contentMembership">
         <div>
+          <a>Welcome to membership program please insert you card number<a><br><br>
           <label for="card-number">Card Number</label><br>
           <input type="number" name="card-number" id="card-number" class="inputMembership" required>
-          <button id="btnConsult">Consult</button>
+          <button id="btnConsult">Consult</button><br><br>
         </div>
         
-        <br><span id="loadingGiftCard"><img width="35px" src="img/ajax.gif"/></span>
+        <!--<br><span id="loadingGiftCard"><img width="35px" src="img/ajax.gif"/></span>-->
         <label for="balanceAmount">Balance Amount</label>
         <input type="text" id="balanceAmount" class="inputMembership" readonly>
-        <br>
+        <br><br>
         <label for="points-BalanceAmount">Point Balance Amount</label>
         <input type="text" id="points-BalanceAmount" class="inputMembership" readonly>
       </div>
       
       <script>
         btnConsult=document.getElementById("btnConsult");
-        loader=document.getElementById("loadingGiftCard");
+        //loader=document.getElementById("loadingGiftCard");
         document.getElementById("btnConsult").style.display="none";
 
         $id=<?php echo $id?>;
-        document.getElementById("loadingGiftCard").classList.add("display");
+        //document.getElementById("loadingGiftCard").classList.add("display");
         var datos={
           "id": <?php echo $id ?>,
           "cardNumber": "-1"
@@ -133,9 +132,9 @@
         })
         .then(response=>response.json())
         .then(function(data){
-          loader.classList.remove("display");
+          //loader.classList.remove("display");
           if(data != 5678){
-            loader.classList.remove("display");
+            //loader.classList.remove("display");
             document.getElementById("balanceAmount").value="$ "+data.balanceAmount;
             document.getElementById("points-BalanceAmount").value="$ "+data.pointsBalanceAmount;
             document.getElementById("card-number").value=data.numeroTar;
@@ -152,7 +151,7 @@
 
         btnConsult.addEventListener("click", function(){
           
-          loader.classList.add("display");
+          //loader.classList.add("display");
           cardNumber=document.getElementById("card-number").value;
 
           datos.cardNumber=cardNumber.toString();
@@ -164,7 +163,7 @@
           })
           .then(response=>response.json())
           .then(function(data){
-            loader.classList.remove("display");
+            //loader.classList.remove("display");
             document.getElementById("balanceAmount").value="$ "+data.balanceAmount;
             document.getElementById("points-BalanceAmount").value="$ "+data.pointsBalanceAmount;
           });

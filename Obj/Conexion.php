@@ -1,19 +1,20 @@
 <?php
 
 //SERVER Xammp
-
+/*
 $serv = "127.0.0.1";
 $usuario = "root";
 $password = "";
 $base = "trucksaver";
+*/
 
 //SERVER HOSTGATOR
-/*
+
 $serv = "162.241.2.36";
 $usuario = "appthetr_root";
 $password = "Abcd1234";
 $base = "appthetr_trucksaver";
-*/
+
 
 //SERVER HOSTINGER
 /*
