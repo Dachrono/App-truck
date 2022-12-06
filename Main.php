@@ -92,9 +92,84 @@
 
     </div>
 
-    <!--<div id="messages" class="tabcontent">
-      Without card
-    </div>-->
+    <div id="messages" class="tabcontent">
+      <div class="title-membership">
+        <h2 style="color:white">Membership Reward</h2>
+      </div>
+      <br>
+      <div class="contentMembership">
+        <div>
+          <label for="card-number">Card Number</label><br>
+          <input type="number" name="card-number" id="card-number" class="inputMembership" required>
+          <button id="btnConsult">Consult</button>
+        </div>
+        
+        <br><span id="loadingGiftCard"><img width="35px" src="img/ajax.gif"/></span>
+        <label for="balanceAmount">Balance Amount</label>
+        <input type="text" id="balanceAmount" class="inputMembership" readonly>
+        <br>
+        <label for="points-BalanceAmount">Point Balance Amount</label>
+        <input type="text" id="points-BalanceAmount" class="inputMembership" readonly>
+      </div>
+      
+      <script>
+        btnConsult=document.getElementById("btnConsult");
+        loader=document.getElementById("loadingGiftCard");
+        document.getElementById("btnConsult").style.display="none";
+
+        $id=<?php echo $id?>;
+        document.getElementById("loadingGiftCard").classList.add("display");
+        var datos={
+          "id": <?php echo $id ?>,
+          "cardNumber": "-1"
+        };
+
+        fetch("Obj/BackGiftCard/consultGiftCard.php",{
+          method:"POST",
+          body:JSON.stringify(datos),
+          headers: {"Content-type": "application/json;charset=UTF-8"}
+        })
+        .then(response=>response.json())
+        .then(function(data){
+          loader.classList.remove("display");
+          if(data != 5678){
+            loader.classList.remove("display");
+            document.getElementById("balanceAmount").value="$ "+data.balanceAmount;
+            document.getElementById("points-BalanceAmount").value="$ "+data.pointsBalanceAmount;
+            document.getElementById("card-number").value=data.numeroTar;
+            document.getElementById("card-number").readOnly=true;
+          }else{
+            document.getElementById("btnConsult").style.display="inline-block";
+            loader.classList.remove("display");
+
+          }
+          
+
+        });
+
+
+        btnConsult.addEventListener("click", function(){
+          
+          loader.classList.add("display");
+          cardNumber=document.getElementById("card-number").value;
+
+          datos.cardNumber=cardNumber.toString();
+
+          fetch("Obj/BackGiftCard/consultGiftCard.php",{
+            method:"POST",
+            body:JSON.stringify(datos),
+            headers: {"Content-type": "application/json;charset=UTF-8"}
+          })
+          .then(response=>response.json())
+          .then(function(data){
+            loader.classList.remove("display");
+            document.getElementById("balanceAmount").value="$ "+data.balanceAmount;
+            document.getElementById("points-BalanceAmount").value="$ "+data.pointsBalanceAmount;
+          });
+        });
+
+      </script>
+    </div>
 
     <div id="profile" class="tabcontent">
       <table>
@@ -141,10 +216,10 @@
         <button class="tablinks" onclick="opendiv(event, 'vehicles')"><img src="img/Menu/vehicle.jpg" style="max-width: 100%; height: 37px;"></button>
         <br>VEHICLES
       </div>
-      <!--<div class="icon">
-        <button class="tablinks" onclick="opendiv(event, 'messages')"><img src="img/Menu/message.jpg" style="width: 37px; height: 37px"></button>
+      <div class="icon">
+        <button class="tablinks" onclick="opendiv(event, 'messages') "><img src="img/Menu/message.jpg" style="width: 37px; height: 37px"></button>
         <br>MEMBERSHIP REWARDS
-      </div>-->
+      </div>
       <div class="icon">
         <button class="tablinks" onclick="opendiv(event, 'profile')"><img src="img/Menu/profile.png" style="width: 37px; height:37px"></button>
         <br>PROFILE
