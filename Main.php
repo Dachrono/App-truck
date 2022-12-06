@@ -22,6 +22,8 @@
   $Add = $row['Address'];
   $Dir = $row['city'].", " .$row['state'];
   $Cod = $row['zcode'];
+
+  //Prueba solamente
 ?>
 
 <html>
