@@ -32,6 +32,7 @@ Vehicle_type varchar(15),
 year int,
 model varchar(64),
 color varchar(35),
+act int(3),
 primary key (idunidad, idcliente, idmarca, model));
 
 create table usuarios

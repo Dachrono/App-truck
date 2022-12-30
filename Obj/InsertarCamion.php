@@ -10,14 +10,15 @@
   $marca = $_POST["make"];
   $modelo = $_POST["model"];
   $colortruck = $_POST["color"];
+  $act = 1;
   if (empty($_POST["vin"])) {
       $VIN = "Sin datos";
     }else {
       $VIN = $_POST["vin"];
     }
 
-  $orden = $conex->prepare("INSERT INTO trucks (IDcliente,IDmarca,state,Vin,plate,Unit,Vehicle_type,year,model,color) values (?,?,?,?,?,?,?,?,?,?)");
-  $orden->bind_param("ssssssssss", $idcliente,$marca,$edotruck,$VIN,$placa,$idunit,$tipotruck,$yeartruck,$modelo,$colortruck);
+  $orden = $conex->prepare("INSERT INTO trucks (IDcliente,IDmarca,state,Vin,plate,Unit,Vehicle_type,year,model,color,act) values (?,?,?,?,?,?,?,?,?,?,?)");
+  $orden->bind_param("sssssssssss", $idcliente,$marca,$edotruck,$VIN,$placa,$idunit,$tipotruck,$yeartruck,$modelo,$colortruck,$act);
 
   if ($orden->execute()) {
     echo '<script language="javascript">alert("Successful registration");window.location.href="../Main.php"</script>';

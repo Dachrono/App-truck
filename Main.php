@@ -51,7 +51,7 @@
     <div id="vehicles" class="tabcontent">
       <br>
       <?php
-        $sql1 = "SELECT trucks.IDunidad, trucks.Unit, trucks.model, trucks.plate, trucks.Vin, marca.descripcion from trucks INNER JOIN marca on trucks.IDmarca = marca.Idmarca where trucks.IDcliente = $id";
+        $sql1 = "SELECT trucks.IDunidad, trucks.Unit, trucks.model, trucks.plate, trucks.Vin, marca.descripcion from trucks INNER JOIN marca on trucks.IDmarca = marca.Idmarca where trucks.IDcliente = $id and trucks.act=1";
         $query2 = mysqli_query($conex, $sql1);
 
         if ($query2->num_rows > 0)
@@ -73,7 +73,7 @@
                  <td>" . $row['plate'] . "</td>
                  <td>". $row['Vin'] ."</td>
                  <td>
-                    <input hidden name='NumUnit' value=". $row['IDunidad'] ."/>
+                    <input hidden name='NumUnit' value=". $row['IDunidad'] .">
                     <button id='sub' type='submit'>Modify unit</button>
                  </td>      
                  </form></tr>";
