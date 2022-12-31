@@ -69,8 +69,7 @@
 
           <div id="grupo_color">
             <label for="color" class="formulario_label">Color:</label>
-            <div style="display: flex">
-              <select id="color" name="color">
+            <select id="color" name="color">
                <option value="White">White</option>
                <option value="Black">Black</option>
                <option value="Red">Red</option>
@@ -78,8 +77,7 @@
                <option value="Orange">Orange</option>
                <option value="Brown">Brown</option>
                <option value="Gray">Gray</option>
-              </select>
-            </div>
+            </select>
           </div>
 
           <br><br>

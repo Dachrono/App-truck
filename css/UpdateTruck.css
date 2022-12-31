@@ -65,6 +65,19 @@ p#exito{
   }
 }
 
+#grupo_color
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#grupo_color select
+{
+  margin-left: 2%;
+  width: 30%;
+}
+
 /*Estilos para validacion*/
 
 .formulario_grupo-correcto .formulario__validacion-estado{
