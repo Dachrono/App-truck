@@ -101,11 +101,12 @@
         <div>
           <a>Welcome to membership program please insert you card number<a><br><br>
           <label for="card-number">Card Number</label><br>
-          <input type="number" name="card-number" id="card-number" class="inputMembership" required>
-          <button id="btnConsult">Consult</button><br><br>
+          <input type="number" name="cardnumber" id="cardnumber" class="inputMembership" required>
+          <button id="btnConsult">Consult</button><br>
         </div>
         
-        <!--<br><span id="loadingGiftCard"><img width="35px" src="img/ajax.gif"/></span>-->
+        <span id="loadingGiftCard"><img width="35px" src="img/ajax.gif"/></span><br><br>
+        <label id="notFound">Sorry can not found your card, please try again</label><br><br>
         <label for="balanceAmount">Balance Amount</label>
         <input type="text" id="balanceAmount" class="inputMembership" readonly>
         <br><br>
@@ -114,60 +115,78 @@
       </div>
       
       <script>
-        btnConsult=document.getElementById("btnConsult");
-        //loader=document.getElementById("loadingGiftCard");
-        document.getElementById("btnConsult").style.display="none";
 
-        $id=<?php echo $id?>;
-        //document.getElementById("loadingGiftCard").classList.add("display");
-        var datos={
-          "id": <?php echo $id ?>,
-          "cardNumber": "-1"
+        document.getElementById("notFound").style.display="none";
+
+        var datos=
+        {
+          "id": <?php echo $id ?>
         };
 
-        fetch("Obj/BackGiftCard/consultGiftCard.php",{
+        fetch("Obj/BackGiftCard/consGC.php",
+        {
           method:"POST",
           body:JSON.stringify(datos),
           headers: {"Content-type": "application/json;charset=UTF-8"}
         })
         .then(response=>response.json())
-        .then(function(data){
-          //loader.classList.remove("display");
-          if(data != 5678){
-            //loader.classList.remove("display");
-            document.getElementById("balanceAmount").value="$ "+data.balanceAmount;
-            document.getElementById("points-BalanceAmount").value="$ "+data.pointsBalanceAmount;
-            document.getElementById("card-number").value=data.numeroTar;
-            document.getElementById("card-number").readOnly=true;
-          }else{
-            document.getElementById("btnConsult").style.display="inline-block";
-            loader.classList.remove("display");
-
+        .then(function(data)
+        {
+          if(data != 5678)
+          {
+            document.getElementById("cardnumber").value = data;
+            document.getElementById('cardnumber').disabled = true;
+            document.getElementById("btnConsult").style.display="none";
+            document.getElementById("btnConsult").click(); 
+            document.getElementById("loadingGiftCard").style.display="none";
+          }else
+          {
+            document.getElementById("btnConsult").style.display="compact";
+            document.getElementById("loadingGiftCard").style.display="none"; 
           }
-          
-
         });
 
+        //////////////////////////////////////////////////////////////////////////
 
+        cardnumber.addEventListener("focus", function()
+        {
+          document.getElementById("loadingGiftCard").style.display="inline";
+        }
+        );
+
+        //////////////////////////////////////////////////////////////////////////
+        
         btnConsult.addEventListener("click", function(){
+           
+          cardNumber=document.getElementById("cardnumber").value;
           
-          //loader.classList.add("display");
-          cardNumber=document.getElementById("card-number").value;
-
-          datos.cardNumber=cardNumber.toString();
+          var datos=
+          {
+          "CardN": cardNumber
+          };
 
           fetch("Obj/BackGiftCard/consultGiftCard.php",{
-            method:"POST",
-            body:JSON.stringify(datos),
-            headers: {"Content-type": "application/json;charset=UTF-8"}
+          method:"POST",
+          body:JSON.stringify(datos),
+          headers: {"Content-type": "application/json;charset=UTF-8"}
           })
           .then(response=>response.json())
-          .then(function(data){
-            //loader.classList.remove("display");
-            document.getElementById("balanceAmount").value="$ "+data.balanceAmount;
-            document.getElementById("points-BalanceAmount").value="$ "+data.pointsBalanceAmount;
+          .then(function(data)
+          {
+            if(data.balanceAmount != null)
+            {
+              document.getElementById("balanceAmount").value="$ "+data.balanceAmount;
+              document.getElementById("points-BalanceAmount").value="$ "+data.pointsBalanceAmount;
+              document.getElementById("loadingGiftCard").style.display="none";
+              document.getElementById("notFound").style.display="none";
+            }else
+            {
+              document.getElementById("loadingGiftCard").style.display="none";
+              document.getElementById("notFound").style.display="inline";
+            }
+
           });
-        });
+        });  
 
       </script>
     </div>

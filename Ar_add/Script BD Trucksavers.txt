@@ -20,6 +20,15 @@ state varchar (45),
 zcode int,
 primary key (idadd,idcliente));
 
+create table cliente_tdm
+(idTar int auto_increment,
+idcliente int,
+NumTar bigint,
+primary key (idTar)
+);
+
+alter table cliente_tdm add foreign key (idcliente) references cliente(idcliente);
+
 Create table trucks(
 IDunidad int auto_increment,
 IDcliente int,
