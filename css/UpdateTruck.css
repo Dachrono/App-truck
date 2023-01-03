@@ -78,6 +78,19 @@ p#exito{
   width: 30%;
 }
 
+#grupo_state
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#grupo_state select
+{
+  margin-left: 2%;
+  width: 30%;
+}
+
 /*Estilos para validacion*/
 
 .formulario_grupo-correcto .formulario__validacion-estado{

@@ -74,6 +74,7 @@
               </td>
               <td>
                 <select name="Aceite">
+                <option> - Select oil type - </option>
                   <?php
                     $sql3 = "select * from tipos_aceite";
                     $result=mysqli_query($conex, $sql3);

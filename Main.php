@@ -175,8 +175,8 @@
           {
             if(data.balanceAmount != null)
             {
-              document.getElementById("balanceAmount").value="$ "+data.balanceAmount;
-              document.getElementById("points-BalanceAmount").value="$ "+data.pointsBalanceAmount;
+              document.getElementById("balanceAmount").value=" "+data.balanceAmount;
+              document.getElementById("points-BalanceAmount").value=" "+data.pointsBalanceAmount;
               document.getElementById("loadingGiftCard").style.display="none";
               document.getElementById("notFound").style.display="none";
             }else

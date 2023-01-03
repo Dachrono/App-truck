@@ -1,13 +1,10 @@
-Levantamiento de requisitos
+Levantamiento de requisitos ---------- simpletextin
 
 *Banner con informacion del cliente
 *Cambiar el diseño y posicion del tigger
 
---- Modificaciones menores ---
-lista precargada de los estados 
+--- Modificaciones menores --- 
 lista precargada de marcas y trucs
-eliminar el simbolo de pesos 
-opcion oil type - slect oil type -
 correo del taller - telefono, cliente, compañia 
 
 
@@ -18,16 +15,15 @@ correo del taller - telefono, cliente, compañia
 * Debera haber espacio para otros tipos de servicios
 * Facturacion de dash para consulta en app (lo revisa Jorge)
 
-
-simpletextin
-
-
-
 !!! --- REQUERIMIENTOS REALIZADOS --- !!!
 
 *cambiar nombre de la marca
 *Cambiar orden del nombre de la unidad
 *Cambiar la unidad defualt por select unit
-*agregar formulario para modificar datos de la unidad 
-*eliminar unidades que ya no se utilicen
-*Funcionamiento de las tarjetas de membership rewards 
+*agregar formulario para modificar datos de la unidad - dic/22
+*eliminar unidades que ya no se utilicen - dic/22
+*Funcionamiento de las tarjetas de membership rewards - dic/22
+*opcion oil type - select oil type - 2/ene/23 
+*eliminar el simbolo de pesos - 2/ene/23
+*lista precargada de los estados - 2/ene/23
+
