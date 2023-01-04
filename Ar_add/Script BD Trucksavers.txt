@@ -57,8 +57,11 @@ create table marca
 descripcion varchar (45));
 
 create table modelo
-(IDmodelo int primary key,
+(IDmodelo int auto_increment primary key,
+IDmarca int,
 descripcion varchar (45));
+
+alter table modelo add foreign key (IDmarca) references marca(IDmarca);
 
 create table servicio
 (Idservicio int primary key auto_increment,

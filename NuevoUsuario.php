@@ -83,7 +83,7 @@
 
     </script>
 
-    <script>//Modelos y marcas
+    <script>
         $(document).ready(function(){
         var consulta;
         $('input[name="typetruck"]').click(function () {
@@ -99,6 +99,26 @@
           });
         });
         });
+    </script>
+
+    <script>
+      function BuscaModelo()
+      {
+        var combo = document.getElementById("mark");
+        //var selected = combo.options[combo.selectedIndex].text;
+        var id = combo.options[combo.selectedIndex].value;
+
+        $.ajax({
+                url: "Obj/BuscaTruck.php",
+                data: "IdMarca="+id,
+                type: "POST",
+                
+                success: function(data)
+                {
+                  $("#model").html(data);
+                }
+          });
+      }
     </script>
 
   </head>
@@ -197,20 +217,23 @@
             </select> 
             <input class="inp" placeholder="Plate" oninput="this.className = ''" name="plate" style="width: 40%">
           </p>
-          <h5>Vehicle Type</h5>
-          <p>
+          <h5>Vehicle Type
             <input class="inp" type="radio" oninput="this.className = ''" name="typetruck" value="truck"> Truck
             <input class="inp" type="radio" oninput="this.className = ''" name="typetruck" value="trailer"> Trailer
-            <select style="margin: 10px" class="inp" id="mark" name="make">
-              <option value="">--Select--</option>
+          </h5>  
+          <p>
+            <select style="margin: 10px" id="mark" name="make" onchange="BuscaModelo();">
+              <option value="">--Select vehicle type--</option>
+            </select>
+            <select style="margin: 10px" id="model" name="model">&emsp;&emsp;
+              <option value="">-- Select model --</option>
             </select>
           </p>
           <p>
-            <input placeholder="Model" name="model" required style="width: 40%">&emsp;&emsp;
-            <input class="inp" type="number" placeholder="Year" oninput="this.className = ''" name="year" style="width: 40%">
-          </p>
-          <p>
+            <input class="inp" type="number" placeholder="Year" oninput="this.className = ''" name="year" style="width: 40%">&emsp;&emsp;
             <input class="inp" placeholder="Unit #" oninput="this.className = ''" name="unit" style="width: 30%">&emsp;&emsp;&emsp;
+            <br>
+            <br>
             <select name="color">
               <option value="">--Select color--</option>
               <option value="White">White</option>

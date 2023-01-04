@@ -25,6 +25,26 @@
       });
     </script>
 
+    <script>
+      function BuscaModelo()
+      {
+        var combo = document.getElementById("mark");
+        //var selected = combo.options[combo.selectedIndex].text;
+        var id = combo.options[combo.selectedIndex].value;
+
+        $.ajax({
+                url: "Obj/BuscaTruck.php",
+                data: "IdMarca="+id,
+                type: "POST",
+                
+                success: function(data)
+                {
+                  $("#model").html(data);
+                }
+          });
+      }
+    </script>
+
   </head>
 
   <body>
@@ -88,21 +108,23 @@
           </select>    
           <input placeholder="Plate" name="plate" required style="width: 40%"> </input>
         </p>
-        <h5>Vehicle Type</h5>
-          <p>
+        <h5>Vehicle Type
             <input type="radio" name="typetruck" required value="truck"> Truck
             <input type="radio" name="typetruck" required value="trailer"> Trailer
-            <select style="margin: 10px" id="mark" name="make">
-              <option value="">--Select type--</option>
+        </h5>  
+          <p>
+            <select style="margin: 10px" id="mark" name="make" onchange="BuscaModelo();">
+              <option value="">--Select vehicle type--</option>
+            </select>
+            <!--<input placeholder="Model" id="model" name="model" disabled style="width: 40%">&emsp;&emsp;-->
+            <select style="margin: 10px" id="model" name="model">&emsp;&emsp;
+              <option value="">-- Select model --</option>
             </select>
           </p>
           <p>
-            <input placeholder="Model" name="model" required style="width: 40%">&emsp;&emsp;
-            <input type="number" placeholder="Year" name="year" required style="width: 40%"></input>
-          </p>
-          <p>
+            <input type="number" placeholder="Year" name="year" required style="width: 40%"></input>&emsp;&emsp;
             <input placeholder="Unit #" name="unit" required style="width: 30%">&emsp;&emsp;&emsp;
-            <!--<input placeholder="Color" name="color" required style="width: 40%">>-->
+            <br><br>
             <select name="color">
               <option value="">--Select color--</option>
               <option value="White">White</option>

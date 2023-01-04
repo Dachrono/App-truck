@@ -41,7 +41,7 @@
 
     <div class="Encabezado">
       <img  src="img/LogoPrin2.png"></img>
-      <span>Good Evening, <?php echo $Desencriptar($nombre); ?></span>
+      <span>Welcome, <?php echo $Desencriptar($nombre); ?></span>
     </div>
 
     <div id="home" class="tabcontent">

@@ -4,11 +4,11 @@ Levantamiento de requisitos ---------- simpletextin
 *Cambiar el diseño y posicion del tigger
 
 --- Modificaciones menores --- 
-lista precargada de marcas y trucs
+css para merbership rewards
 correo del taller - telefono, cliente, compañia 
 
-
 --- Modificaciones mayores ---
+*agregar un boton para hacer checkin cuando lleguen a taller msj txt
 *formulario para cambiar modificar o eliminar tarjetas de membership
 
 --- Modificaciones futuras ---
@@ -26,4 +26,5 @@ correo del taller - telefono, cliente, compañia
 *opcion oil type - select oil type - 2/ene/23 
 *eliminar el simbolo de pesos - 2/ene/23
 *lista precargada de los estados - 2/ene/23
+*lista precargada de marcas y trucs 4/ene/23
 
