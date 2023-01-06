@@ -61,6 +61,6 @@ CorreoClienteNuevo($email, $fullname, $usuario, $pass);
 
 Control($idcliente, $fullname, $email);
 
-echo '<script language="javascript">alert("Registro creado con exito"); window.location.href="../PagPrin.php"</script>';
+echo '<script language="javascript">alert("Successful registration"); window.location.href="../PagPrin.php"</script>';
 
 ?>

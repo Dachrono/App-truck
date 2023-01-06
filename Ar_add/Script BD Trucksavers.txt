@@ -54,7 +54,8 @@ primary key (iduser,idcliente));
 
 create table marca
 (IDmarca int primary key,
-descripcion varchar (45));
+descripcion varchar (45),
+type varchar(10));
 
 create table modelo
 (IDmodelo int auto_increment primary key,
@@ -104,18 +105,48 @@ alter table registro_serv add foreign key (idservicio) references servicio(idser
 alter table cliente_add add foreign key (idcliente) references cliente(idcliente);
 
 insert into marca value
-(0,"sin-marca"),
-(1,"ContainerChassis"),
-(2,"DryVan"),
-(3,"Dump"),
-(4,"FlatBed"),
-(5,"Freightliner"),
-(6,"International"),
-(7,"Kenworth"),
-(8,"Mack"),
-(9,"Peterbilt"),
-(10,"TankTrailer"),
-(11,"Volvo");
+(0,"sin-marca", "null"),
+(1,"Dry Van", "trailer"),
+(2,"Flat Bed", "trailer"),
+(3,"LowBoy", "trailer"),
+(4,"Tank", "trailer"),
+(5,"Dump", "trailer"),
+(6,"Chassys", "trailer"),
+(7,"Freightliner", "truck"),
+(8,"Kenworth", "truck"),
+(9,"Peterbilt", "truck"),
+(10,"International", "truck"),
+(11,"Volvo", "truck"),
+(12, "Mack", "truck");
+
+insert into modelo value
+(0, 7, "Cascadia"),
+(1, 7, "Century Class"),
+(2, 7, "Classic XL"),
+(3, 7, "Columbia"),
+(4, 7, "Coronado"),
+(5, 7, "FL 112"),
+(6, 7, "FLD 120"),
+(7, 8, "T2000"),
+(8, 8, "T600"),
+(9, 8, "T700"),
+(10, 8, "T800"),
+(11, 8, "W900"),
+(12, 9, "377"),
+(13, 9, "379"),
+(14, 9, "385"),
+(15, 9, "386"),
+(16, 9, "389"),
+(17, 9, "587"),
+(18, 9, "589"),
+(19, 10, "ProStar"),
+(20, 10, "4400"),
+(21, 10, "8600"),
+(22, 10, "9400"),
+(23, 10, "9900"),
+(24, 11, "VM"),
+(25, 11, "VN"),
+(26, 12, "Mack");
 
 alter table marca add type varchar(10);
 update marca set type="null" where idmarca=0;

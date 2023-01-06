@@ -30,9 +30,6 @@
                   let ley = data == 1234 ? "Username available" : "Username don't available";
                   $(`#resultadoUser`).html(ley);
                   disponible = data == 1234 ? true : false;
-                  console.log(data);
-                  console.log(ley);
-                  console.log(disponible);
                   n();
                 },
                 error: function()
@@ -58,9 +55,6 @@
                 let ley = data == 1234 ? "Email available" : "Email don't available";
                 $("#resultadoCorreo").html(ley);
                 disponibleCorreo = data == 1234 ? true : false;
-                console.log(data);
-                console.log(ley);
-                console.log(disponible);
                 n();
               },
               error: function()
@@ -88,6 +82,14 @@
         var consulta;
         $('input[name="typetruck"]').click(function () {
           consulta = $('input[name="typetruck"]:checked').val();
+
+          if(consulta == "trailer")
+          {
+            document.getElementById("model").style.display="none"; 
+          }else
+          {
+            document.getElementById("model").style.display="inline"; 
+          }
 
           $.ajax({
             url: "Obj/BuscaTruck.php",
@@ -226,7 +228,7 @@
               <option value="">--Select vehicle type--</option>
             </select>
             <select style="margin: 10px" id="model" name="model">&emsp;&emsp;
-              <option value="">-- Select model --</option>
+              <option value=" ">-- Select model --</option>
             </select>
           </p>
           <p>

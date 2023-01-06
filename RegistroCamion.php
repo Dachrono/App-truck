@@ -13,11 +13,20 @@
         $('input[name="typetruck"]').click(function () {
           consulta = $('input[name="typetruck"]:checked').val();
 
+          if(consulta == "trailer")
+          {
+            document.getElementById("model").style.display="none"; 
+          }else
+          {
+            document.getElementById("model").style.display="inline"; 
+          }
+
           $.ajax({
             url: "Obj/BuscaTruck.php",
             data: "tipomar="+consulta,
             type: "POST",
-            success: function(data){
+            success: function(data)
+            {
               $("#mark").html(data);
             }
           });
@@ -116,9 +125,8 @@
             <select style="margin: 10px" id="mark" name="make" onchange="BuscaModelo();">
               <option value="">--Select vehicle type--</option>
             </select>
-            <!--<input placeholder="Model" id="model" name="model" disabled style="width: 40%">&emsp;&emsp;-->
             <select style="margin: 10px" id="model" name="model">&emsp;&emsp;
-              <option value="">-- Select model --</option>
+              <option value=" ">-- Select model --</option>
             </select>
           </p>
           <p>
