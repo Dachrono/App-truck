@@ -115,10 +115,72 @@ body{
   text-align: right
 }
 
-#messages{
-  min-height: 50%;
+#messages
+{
   margin-top: 5px;
   border: 1px solid rgba(152, 152, 152, 0.49);
+}
+
+.contentMembership
+{  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentMembership h2
+{
+  margin: 3px;
+  width: 100%;
+  background-color: #27961c;
+  color: white;
+  text-align: center;
+}
+
+.adj
+{
+  width: 50%;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.item
+{
+  margin: 5px;
+}
+
+.inputMembership
+{
+  margin: 5px;
+}
+
+.adj1
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.adj2
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.adj3
+{
+  width: 100%;
+  border-top: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .controles{

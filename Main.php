@@ -93,25 +93,29 @@
     </div>
 
     <div id="messages" class="tabcontent">
-      <div class="title-membership">
-        <h2 style="color:white">Membership Reward</h2>
-      </div>
-      <br>
       <div class="contentMembership">
-        <div>
-          <a>Welcome to membership program please insert you card number<a><br><br>
-          <label for="card-number">Card Number</label><br>
-          <input type="number" name="cardnumber" id="cardnumber" class="inputMembership" required>
-          <button id="btnConsult">Consult</button><br>
+
+        <h2>Welcome to membership program please insert you card number</h2>
+
+        <div class="adj">
+          <div class="adj1">
+            <label class="item" for="card-number">Card Number</label>
+            <input type="number" name="cardnumber" id="cardnumber" class="inputMembership" required>
+            <button class="item" id="btnConsult">Consult</button><br>
+          </div>
+          <div class="adj2">
+            <span id="loadingGiftCard"><img width="35px" src="img/ajax.gif"/></span>
+            <label id="notFound">Sorry can not found your card, please try again</label>
+          </div>
+        </div>
+
+        <div class="adj3">
+            <label class="item" for="balanceAmount">Balance Amount</label>
+            <input type="text" id="balanceAmount" class="inputMembership" readonly>
+            <label class="item" for="points-BalanceAmount">Point Balance Amount</label>
+            <input type="text" id="points-BalanceAmount" class="inputMembership" readonly>
         </div>
         
-        <span id="loadingGiftCard"><img width="35px" src="img/ajax.gif"/></span><br><br>
-        <label id="notFound">Sorry can not found your card, please try again</label><br><br>
-        <label for="balanceAmount">Balance Amount</label>
-        <input type="text" id="balanceAmount" class="inputMembership" readonly>
-        <br><br>
-        <label for="points-BalanceAmount">Point Balance Amount</label>
-        <input type="text" id="points-BalanceAmount" class="inputMembership" readonly>
       </div>
       
       <script>

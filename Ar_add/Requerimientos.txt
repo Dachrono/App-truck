@@ -4,7 +4,7 @@ Levantamiento de requisitos ---------- simpletextin
 *Cambiar el diseño y posicion del tigger
 
 --- Modificaciones menores --- 
-css para merbership rewards
+
 correo del taller - telefono, cliente, compañia 
 
 --- Modificaciones mayores ---
@@ -27,4 +27,5 @@ correo del taller - telefono, cliente, compañia
 *eliminar el simbolo de pesos - 2/ene/23
 *lista precargada de los estados - 2/ene/23
 *lista precargada de marcas y trucs 4/ene/23
+*css para merbership rewards 6/ene/23
 
