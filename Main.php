@@ -32,6 +32,8 @@
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="css/Main.css" type="text/css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="Js/TarjMem.js"></script>
 
 </head>
 
@@ -102,6 +104,7 @@
             <label class="item" for="card-number">Card Number</label>
             <input type="number" name="cardnumber" id="cardnumber" class="inputMembership" required>
             <button class="item" id="btnConsult">Consult</button><br>
+            
           </div>
           <div class="adj2">
             <span id="loadingGiftCard"><img width="35px" src="img/ajax.gif"/></span>
@@ -115,17 +118,40 @@
             <label class="item" for="points-BalanceAmount">Point Balance Amount</label>
             <input type="text" id="points-BalanceAmount" class="inputMembership" readonly>
         </div>
+
+        <div class="adj4">
+          <table>
+            <tr>
+              <td colspan="2">
+                <button class="item" onclick="Editar()">Keep or change my cardnumber</button>
+              </td>              
+            </tr>
+            <tr>
+              <td>
+                <button class="item" id="save" onclick="Save('<?php echo $id; ?>')">Save as my card number</button>
+              </td>
+              <td>
+                <input class="item" id="TDM" type="text" placeholder="Num de tarjeta">
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2"><button class="item" id="delete" onclick="">Delete card number</button></td>
+            </tr>
+            
+          </table>
+        </div>
         
       </div>
       
       <script>
-
+        document.getElementById("save").style.display="none";
+        document.getElementById("TDM").style.display="none";
+        document.getElementById("delete").style.display="none";
         document.getElementById("notFound").style.display="none";
 
-        var datos=
-        {
+        let datos = {
           "id": <?php echo $id ?>
-        };
+        } 
 
         fetch("Obj/BackGiftCard/consGC.php",
         {
@@ -141,12 +167,13 @@
             document.getElementById("cardnumber").value = data;
             document.getElementById('cardnumber').disabled = true;
             document.getElementById("btnConsult").style.display="none";
-            document.getElementById("btnConsult").click(); 
+            document.getElementById("btnConsult").click();
             document.getElementById("loadingGiftCard").style.display="none";
           }else
           {
             document.getElementById("btnConsult").style.display="compact";
             document.getElementById("loadingGiftCard").style.display="none"; 
+            saver = 0;
           }
         });
 
@@ -155,6 +182,10 @@
         cardnumber.addEventListener("focus", function()
         {
           document.getElementById("loadingGiftCard").style.display="inline";
+          document.getElementById("save").style.display="none";
+          document.getElementById("TDM").style.display="none";
+          document.getElementById("delete").style.display="none";
+          document.getElementById("notFound").style.display="none"
         }
         );
 
@@ -164,10 +195,9 @@
            
           cardNumber=document.getElementById("cardnumber").value;
           
-          var datos=
-          {
-          "CardN": cardNumber
-          };
+          let datos = {
+            "CardN": cardNumber
+          } 
 
           fetch("Obj/BackGiftCard/consultGiftCard.php",{
           method:"POST",

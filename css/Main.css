@@ -183,6 +183,20 @@ body{
   align-items: center;
 }
 
+.adj4
+{
+  width: 100%;
+  border-top: 3px solid black;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.adj4 table, td, tr
+{
+  text-align: center;
+}
+
 .controles{
   max-width: 100%;
   font-size: 80%;
