@@ -4,12 +4,10 @@ Levantamiento de requisitos ---------- simpletextin
 *Cambiar el diseño y posicion del tigger
 
 --- Modificaciones menores --- 
-
 correo del taller - telefono, cliente, compañia 
 
 --- Modificaciones mayores ---
 *agregar un boton para hacer checkin cuando lleguen a taller msj txt
-*formulario para cambiar modificar o eliminar tarjetas de membership
 
 --- Modificaciones futuras ---
 * Debera haber espacio para otros tipos de servicios
@@ -28,4 +26,6 @@ correo del taller - telefono, cliente, compañia
 *lista precargada de los estados - 2/ene/23
 *lista precargada de marcas y trucs 4/ene/23
 *css para merbership rewards 6/ene/23
+*formulario para cambiar modificar o eliminar tarjetas de membership 12/ene/23
+
 
