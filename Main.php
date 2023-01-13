@@ -104,6 +104,7 @@
             <label class="item" for="card-number">Card Number</label>
             <input type="number" name="cardnumber" id="cardnumber" class="inputMembership" required>
             <button class="item" id="btnConsult">Consult</button><br>
+            <button class="item" id="delete" onclick="Delete('<?php echo $id; ?>')">Delete card number</button>
             
           </div>
           <div class="adj2">
@@ -122,22 +123,15 @@
         <div class="adj4">
           <table>
             <tr>
-              <td colspan="2">
-                <button class="item" onclick="Editar()">Keep or change my cardnumber</button>
-              </td>              
+              <td colspan="2"><button class="item" onclick="Editar()">Keep or change my cardnumber</button></td>              
             </tr>
             <tr>
-              <td>
-                <button class="item" id="save" onclick="Save('<?php echo $id; ?>')">Save as my card number</button>
-              </td>
-              <td>
-                <input class="item" id="TDM" type="text" placeholder="Num de tarjeta">
-              </td>
+              <td><button class="item" id="save" onclick="Save('<?php echo $id; ?>')">Save as my card number</button></td>
+              <td><input class="item" type="text" id="TDM"></input></td>
             </tr>
             <tr>
-              <td colspan="2"><button class="item" id="delete" onclick="">Delete card number</button></td>
+              <td colspan="2"></td>
             </tr>
-            
           </table>
         </div>
         
@@ -166,6 +160,7 @@
           {
             document.getElementById("cardnumber").value = data;
             document.getElementById('cardnumber').disabled = true;
+            document.getElementById("delete").style.display="inline"; 
             document.getElementById("btnConsult").style.display="none";
             document.getElementById("btnConsult").click();
             document.getElementById("loadingGiftCard").style.display="none";
@@ -173,7 +168,6 @@
           {
             document.getElementById("btnConsult").style.display="compact";
             document.getElementById("loadingGiftCard").style.display="none"; 
-            saver = 0;
           }
         });
 
