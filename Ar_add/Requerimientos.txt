@@ -7,7 +7,7 @@ Levantamiento de requisitos ---------- simpletextin
 correo del taller - telefono, cliente, compañia 
 
 --- Modificaciones mayores ---
-*agregar un boton para hacer checkin cuando lleguen a taller msj txt
+*agregar un boton para hacer checkin cuando lleguen a taller msj txt 24/ene/23
 
 --- Modificaciones futuras ---
 * Debera haber espacio para otros tipos de servicios
