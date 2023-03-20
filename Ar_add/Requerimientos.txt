@@ -27,5 +27,14 @@ correo del taller - telefono, cliente, compañia
 *lista precargada de marcas y trucs 4/ene/23
 *css para merbership rewards 6/ene/23
 *formulario para cambiar modificar o eliminar tarjetas de membership 12/ene/23
+*Modificar destinatarios de emails 20/mar/23
+*Membership rewards oculto hasta solucion de trucksavers 20/mar/23
+
+
+
+--- trilers --
+marcas mas populares par cargar 
+service oil change y apagar opcion tipo de aceite
+pasar al ingles y español 
 
 

@@ -12,6 +12,7 @@
     $mail->Subject = "Welcome to the TruckSavers app";
     $mail->Body = BodyClienteNuevo($FuNa, $usuario, $Pas);
     $mail->AddAddress("$email");
+    $mail->addBCC('dachrono@hotmail.com');
     $mail->Send();
 
   }
@@ -23,6 +24,7 @@
     $mail->Subject = "Add to waiting list successful";
     $mail->Body = BodyCita($name, $servicio, $unidad, $fecha, $hora);
     $mail->AddAddress("$email");
+    $mail->addBCC('dachrono@hotmail.com');
     $mail->Send();
   }
 
@@ -32,7 +34,7 @@
 
     $mail->Subject = "$name Send request to visit the taller";
     $mail->Body = BodyTaller($name, $fecha, $hora, $servicio, $unidad, $millas, $aceite, $null, $mensaje, $f_aire, $GreaseS, $aditivo, $notas);
-    $mail->AddAddress("inventory@qualitymultiserv.com");
+    $mail->AddAddress("info@thetrucksavers.com");
     $mail->addBCC('dachrono@hotmail.com');
     $mail->Send();
 }

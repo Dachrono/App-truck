@@ -94,7 +94,7 @@
 
     </div>
 
-    <div id="messages" class="tabcontent">
+    <!--<div id="messages" class="tabcontent">
       <div class="contentMembership">
 
         <h2>Welcome to membership program please insert you card number</h2>
@@ -217,7 +217,7 @@
         });  
 
       </script>
-    </div>
+    </div>-->
 
     <div id="profile" class="tabcontent">
       <table>
@@ -264,10 +264,10 @@
         <button class="tablinks" onclick="opendiv(event, 'vehicles')"><img src="img/Menu/vehicle.jpg" style="max-width: 100%; height: 37px;"></button>
         <br>VEHICLES
       </div>
-      <div class="icon">
+      <!--<div class="icon">
         <button class="tablinks" onclick="opendiv(event, 'messages') "><img src="img/Menu/message.jpg" style="width: 37px; height: 37px"></button>
         <br>MEMBERSHIP REWARDS
-      </div>
+      </div>-->
       <div class="icon">
         <button class="tablinks" onclick="opendiv(event, 'profile')"><img src="img/Menu/profile.png" style="width: 37px; height:37px"></button>
         <br>PROFILE
